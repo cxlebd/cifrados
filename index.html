@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cifrados</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="principal">
+        <div class="btns">
+            <button type="button" class="btn btn-primary btn-sm" id="btn-cesar">Cifrado César</button>
+            <button type="button" class="btn btn-primary btn-sm" id="btn-transpo">Cifrado de transposición</button>
+        </div>
+        <div class="forms">
+            <form id="form-cesar" autocomplete="off">
+                <div class="cabecera">
+                    <h1>Cifrado César</h1>
+
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button class="btn btn-danger sm-btn" id="cifrar-cesar">Cifrar</button>
+                        <button class="btn btn-warning sm-btn" id="descifrar-cesar">Descifrar</button>
+                        <button type="button" class="btn-ayuda" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                            </svg>
+                        </button>      
+                    </div>                    
+                                        <!-- Button trigger modal -->
+                                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ajustes</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            Elige el rango del cifrado:
+                            <input type="number" id="cesar-rango">
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="guardar-cesar"  data-bs-dismiss="modal" aria-label="Close">Guardar</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label>Ingrese el texto</label>
+                    <textarea class="form-control" id="cesar-original" rows="3"></textarea>
+                </div>
+                    <input class="form-control" type="text" id="cesar-cifrado" readonly>
+            </form>
+
+            <form id="form-transpo">
+                <h1>Cifrado de transposicíon</h1>
+            </form>
+        </div>
+    </div>
+<script src="script.js"></script>    
+</body>
+</html>

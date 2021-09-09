@@ -1,0 +1,28 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.forms {
+    margin-top: 1em;
+    width: 100%;
+}
+
+#form-transpo, #form-cesar { 
+    display: none;
+}
+
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.btn-ayuda {
+    border: none;
+}
