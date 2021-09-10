@@ -42,10 +42,10 @@
                             </div>
                             <div class="modal-body">
                             Elige el rango del cifrado:
-                            <input type="number" id="cesar-rango">
+                            <input type="number" id="cesar-rango" value="1">
                             </div>
                             <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" id="guardar-cesar"  data-bs-dismiss="modal" aria-label="Close">Guardar</button>
+                            <button type="button" class="btn btn-primary" id="guardar-cesar" data-bs-dismiss="modal" aria-label="Close">Guardar</button>
                             </div>
                         </div>
                         </div>
@@ -56,11 +56,25 @@
                     <label>Ingrese el texto</label>
                     <textarea class="form-control" id="cesar-original" rows="3"></textarea>
                 </div>
-                    <input class="form-control" type="text" id="cesar-cifrado" readonly>
+                    <textarea class="form-control" type="text" id="cesar-cifrado" readonly></textarea>
             </form>
-
             <form id="form-transpo">
-                <h1>Cifrado de transposicíon</h1>
+                <div class="cabecera">
+                    <h1>Cifrado de transposicón</h1>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button class="btn btn-danger sm-btn" id="cifrar-transpo">Cifrar</button>
+                        <button class="btn btn-warning sm-btn" id="descifrar-transpo">Descifrar</button>                        
+                    </div>
+                    <div>
+                        <label>Introduce la llave:</label>
+                        <input type="text" id="transpo-key">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label>Ingrese el texto</label>
+                    <textarea class="form-control" id="cesar-original" rows="3"></textarea>
+                </div>
+                    <textarea class="form-control" type="text" id="cesar-cifrado" readonly></textarea>
             </form>
         </div>
     </div>
